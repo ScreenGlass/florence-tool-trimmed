@@ -18,7 +18,8 @@ import webdataset as wds
 
 IS_WINDOWS = sys.platform == "win32"
 
-from .modeling import Florence2ForConditionalGeneration, Florence2Processor
+# from .modeling import Florence2ForConditionalGeneration, Florence2Processor
+from transformers import AutoProcessor as Florence2Processor, AutoModelForCausalLM as Florence2ForConditionalGeneration
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
